@@ -50,7 +50,7 @@ const Tooltip = ({
             <Button>Next</Button>
           </TouchableOpacity> :
           <TouchableOpacity onPress={handleStop}>
-            <Button>Finish</Button>
+            <Button>باشه</Button>
           </TouchableOpacity>
       }
     </View>
