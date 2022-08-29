@@ -127,8 +127,8 @@ class ViewMask extends Component<Props, State> {
         <TouchableOpacity
           style={{
             backgroundColor: 'transparent',
-            [start]: this.props.position.x,
-            [end]: (this.props.layout.width - (this.props.size.x + this.props.position.x)),
+            left: this.props.position.x,
+            right: (this.props.layout.width - (this.props.size.x + this.props.position.x)),
             top: this.props.position.y,
             width: this.props.size.x,
             height: this.props.size.y,
