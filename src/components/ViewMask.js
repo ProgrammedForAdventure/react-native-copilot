@@ -1,15 +1,9 @@
 // @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { View, Animated, I18nManager, TouchableOpacity } from 'react-native';
+import { View, Animated } from 'react-native';
 import styles from './style';
 
 import type { CopilotContext, valueXY } from '../types';
-
-
-const rtl = I18nManager.isRTL;
-const start = rtl ? 'right' : 'left';
-const end = rtl ? 'left' : 'right';
 
 type Props = {
   size: valueXY,
@@ -91,14 +85,14 @@ class ViewMask extends Component<Props, State> {
           style={[
             styles.overlayRectangle,
             {
-              [end]: leftOverlayRight,
+              right: leftOverlayRight,
             }]}
         />
         <Animated.View
           style={[
             styles.overlayRectangle,
             {
-              [start]: rightOverlayLeft,
+              left: rightOverlayLeft,
             }]}
         />
         <Animated.View
@@ -106,8 +100,8 @@ class ViewMask extends Component<Props, State> {
             styles.overlayRectangle,
             {
               top: bottomOverlayTopBoundary,
-              [start]: verticalOverlayLeftBoundary,
-              [end]: verticalOverlayRightBoundary,
+              left: verticalOverlayLeftBoundary,
+              right: verticalOverlayRightBoundary,
             },
           ]}
         />
@@ -116,8 +110,8 @@ class ViewMask extends Component<Props, State> {
             styles.overlayRectangle,
             {
               bottom: topOverlayBottomBoundary,
-              [start]: verticalOverlayLeftBoundary,
-              [end]: verticalOverlayRightBoundary,
+              left: verticalOverlayLeftBoundary,
+              right: verticalOverlayRightBoundary,
             },
           ]}
         />
